@@ -8,12 +8,24 @@ import net.runelite.client.config.ConfigItem;
 public interface ExampleConfig extends Config
 {
 	@ConfigItem(
-		keyName = "greeting",
-		name = "Welcome Greeting",
-		description = "The message to show to the user when they login"
+		keyName = "Nerdmessage",
+		name = "Nerdlog message",
+		description = "The message to show to the user when they login",
+			position = 1
+
 	)
-	default String greeting()
+	default String Nerdmessage()
 	{
-		return "Hello";
+		return "Nerd nerd afgekeurd";
+	}
+	@ConfigItem(
+			keyName = "Nerdiermessage",
+			name = "MinutestoNerdlog",
+			description = "The message to show to the user when they login",
+			position = 2
+	)
+	default String Nerdiermessage()
+	{
+		return "Nerd nerd afgekeurd over [Time] minuten";
 	}
 }
